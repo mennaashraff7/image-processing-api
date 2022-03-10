@@ -1,0 +1,33 @@
+{
+  "name": "image-processing-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "prettier": "prettier --config .prettierrc src/**/*.ts --write",
+    "lint": "eslint src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mennaashraff7/image-processing-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mennaashraff7/image-processing-api/issues"
+  },
+  "homepage": "https://github.com/mennaashraff7/image-processing-api#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "2.5.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}
