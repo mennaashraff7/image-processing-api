@@ -1,7 +1,8 @@
 module.exports = {
   env: {
-    browser: true,
     es2021: true,
+    node: true,
+    jest: true,
   },
   extends: [
     'eslint:recommended',
@@ -10,14 +11,16 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: 13,
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
-    'prettier/prettier': 2,
+    
+    'prettier/prettier': 0, 
     'no-console': 0,
-    'no-var': 'error',
-    'prefer-const': 'error',
+    '@typescript-eslint/no-var-requires': 0,
+     'eslint-disable-next-line no-empty':0,
+     '@typescript-eslint/ban-types':0
   },
-};
+}

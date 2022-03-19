@@ -13,15 +13,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
-const express_1 = __importDefault(require("express"));
-const morgan_1 = __importDefault(require("morgan"));
-const path_1 = __importDefault(require("path"));
 const validation_1 = __importDefault(require("./utilities/validation"));
+const path_1 = __importDefault(require("path"));
 const resize_1 = __importDefault(require("./utilities/resize"));
-const app = (0, express_1.default)();
-const port = 3000;
+const index_1 = __importDefault(require("./index"));
+const resizePic = index_1.default;
 //endpoint
-app.get('/api', validation_1.default, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+resizePic.get('/', validation_1.default, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log("resizePic");
     const imgName = req.query.imgName;
     const width = parseInt(req.query.width);
     const height = parseInt(req.query.height);
@@ -40,9 +39,6 @@ app.get('/api', validation_1.default, (req, res) => __awaiter(void 0, void 0, vo
         console.error(err);
     }
 }));
-//app.use('/api', resizePic);
-app.use((0, morgan_1.default)('tiny'));
-app.listen(port, () => {
-    console.log('main server');
-});
-exports.default = app;
+//routes
+// resizePic.use('/resize', resizePic);
+exports.default = resizePic;
