@@ -30,7 +30,7 @@ const validation = (req, res, next) => {
         }
     }
     catch (error) {
-        res.send(console.error(error));
+        res.send(error);
     }
     next();
 };

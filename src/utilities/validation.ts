@@ -30,7 +30,7 @@ const validation = (
       res.send('please insert available image name');
     }
   } catch (error) {
-    res.send(console.error(error));
+    res.send(error);
   }
   next();
 };
